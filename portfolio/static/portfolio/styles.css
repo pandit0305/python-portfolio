@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(61, 61, 112);
+}
+
+.bg-color {
+    background-color: rgb(102, 102, 192);
+}
+
+.menuBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu>ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+#menu>ul>li {
+    margin-left: 10px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+.Box09{
+    width: 90%; margin: 10px auto;
+}
+#grid {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+}
+
+.text-color {
+    color: white;
+}
+
+.marginX {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.project01{
+    background-color: rgb(102, 102, 192);
+    transition: all 0.3s ease-in;
+}
+.project01:hover{
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+@media (max-width: 1024px) {
+    #grid {
+        width: 90%;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #grid {
+        width: 90%;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    #grid {
+        width: 90%;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
+    }
+}

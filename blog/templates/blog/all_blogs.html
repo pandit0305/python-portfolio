@@ -1,0 +1,18 @@
+<!-- {% extends 'portfolio/header.html' %} -->
+{% block content %}
+<h1 class="text-center text-color marginX">My Blog</h1>
+<h4 class="text-center text-color">Pandit Gangadhar has written {{ blogs.count }} blog{{ blogs.count|pluralize }}.</h4>
+<div class="marginX">
+    {% for blog in blogs %}
+    <div class="card Box09">
+        <div class="card-body">
+            <a class="btn" style="background-color:rgb(100, 100, 177);" href="{% url 'blog:details' blog.id %}">
+                <h5 class="card-title text-color">{{ blog.title }}</h5>
+            </a>
+            <span>{{ blog.date|date:'M d y'|upper }}</span>
+            <p class="card-text">{{ blog.description|safe|truncatechars:100 }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

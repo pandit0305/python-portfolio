@@ -1,0 +1,11 @@
+<!-- {% extends 'portfolio/header.html' %} -->
+{% block content %}
+    <h1 class="text-center marginX text-color">My Blog</h1>
+
+    <div class="card mb-3 Box09">
+        <div class="card-body">
+            <h2 style="color:blue">{{ blog.title }}</h2><span class="date">--{{ blog.date|date:'F jS Y' }}--</span>
+            <p>{{ blog.description | safe }}</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!-- {% extends 'portfolio/header.html' %} -->
+{% block content %}
+        
+        <div style="display: flex;justify-content: center; margin-top: 30px;">
+            {% load static %}
+            <img src="{% static 'portfolio/pandit5.png' %}" style="width: 150px; height: 150px; border-radius: 50%;">
+        </div>
+        <div>
+            <h2 class="text-center text-color">Pandit Gangadhar</h2>
+            <h5 class="text-center text-color">Full Stack Web Developer</h5>
+        </div>
+        <div style="width:80%;margin:50px auto;" class="text-color">
+            <p class="text-center">Inspiring full stack web developer, having problem-solving ability and proficiency in MERN Stack. A quick
+                learner
+                and always curious to learn new things in terms of technology. Worked on two group projects and 15+ solo
+                projects.
+            </p>
+        </div>
+        <hr> 
+        <h2 class="text-center text-color">Project</h2>
+        <div id="grid">
+            {% for project in projects %}
+            <div class="card project01" style="width: 18rem;">
+                <img src="{{ project.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-color">{{ project.title }}</h5>
+                    <p class="card-text text-color">{{ project.description }}</p>
+                    <div>
+                        {% if project.url %}
+                        <a class="btn btn-primary" href="{{ project.url }}">Link</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}
